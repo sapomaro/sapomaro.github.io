@@ -1,0 +1,178 @@
+html, body {
+  position: relative; 
+  width: 100%;
+  min-height: 100%; 
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+  background: #f3f3f3;
+  font: 18px/18px "Arial Unicode",Arial,Helvetica,sans-serif;
+}
+
+.container {
+  position: relative; 
+  min-height: 100%; 
+  height: 100%;
+  width: 50em;
+  margin: 0 auto;
+}
+
+@media (max-width:800px) {
+  body {
+    font-size: 24px; 
+    line-height: 24px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+.container-main {
+  position: relative;
+  width: 39em;
+  vertical-align: top;
+}
+.container-controls {
+  position: relative;
+  width: 10em;
+  padding-left: 1em;
+  vertical-align: top;
+}
+
+.sticky-controls {
+  position: sticky;
+  top: 1em;
+}
+
+h1 {
+  margin: 2ex 0;
+  line-height: 1;
+  color: #333;
+}
+
+table, tr, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-areaset {
+  position: relative;
+  min-height: 40ex;
+  width: 100%;
+  margin: 1ex 0;
+  border: 2px solid #333;
+  background: #fff;
+}
+
+.form-area {
+  font: 100%/1 monospace; 
+  display: block;
+  border: none;
+  resize: none;
+  background: transparent;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow: hidden; 
+  outline: none;
+}
+
+.form-mock, .form-text {
+  min-height: 40ex;
+  width: 90%;
+  padding: 5%;
+  margin: 0;
+}
+
+.form-mock { 
+  position: absolute; 
+  z-index: 1; 
+  color: #aaa; 
+}
+
+.form-text { 
+  position: relative; 
+  z-index: 2; 
+  color: #333; 
+}
+
+.form-button, .form-field {
+  font: 100%/1 monospace; 
+  box-sizing: border-box;
+  display: inline-block;
+  min-height: 5ex;
+  margin: 1ex 0;
+  padding: 10px;
+  border: 2px solid #333;
+  outline: none;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.form-button {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: -1px;
+}
+
+.form-field {
+  width: 3em;
+  text-align: center;
+}
+.form-comment {
+  font-size: 90%;
+  line-height: 90%;
+  display: inline-block;
+  width: 6em;
+  vertical-align: middle;
+}
+
+h2 {
+  font-size: inherit;
+  margin: 1em 0;
+  padding: 0;
+  color: #333;
+}
+
+.form-summary {
+  font-size: 90%;
+  line-height: 90%;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 1em 0;
+  color: #333;
+  letter-spacing: -1pt;
+}
+
+.form-button:active {
+  transform: scale(0.98);
+}
+
+.form-button:disabled {
+  background: #999;
+  border-color: #999;
+  color: #fff;
+  transform: scale(1);
+  cursor: not-allowed;
+}
+
+.form-field:disabled {
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+.form-highlight { text-decoration: underline; }
+.form-highlight0 { color: red; }
+.form-highlight1 { color: gold; }
+.form-highlight2 { color: blue; }
+.form-highlight3 { color: fuchsia; }
+.form-highlight4 { color: lime; }
+.form-highlight5 { color: aqua; }
+.form-highlight6 { color: green; }
+.form-highlight7 { color: orange; }
+.form-highlight8 { color: olive; }
+.form-highlight9 { color: teal; }
