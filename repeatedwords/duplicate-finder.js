@@ -4,8 +4,9 @@ window.DuplicateWordsApp.DuplicatesFinderModule = function(wordFormsHandler) {
   var wordMatrix = {};
 
   wordMatrix.parseInputText = function(text) { // преобразует текст в упорядоченный массив
-    return text.replace('ё', 'е')
-      .split(/[^А-ЯЁа-яёA-Za-z]+/)
+    return text.toLowerCase()
+      .replace(/ё/g, 'е')
+      .split(/[^а-яa-z]+/)
       .filter(String);
   };
 
@@ -17,8 +18,7 @@ window.DuplicateWordsApp.DuplicatesFinderModule = function(wordFormsHandler) {
     this.matrix = {};
 
     for (var pos = 0; pos < wordsArray.length; ++pos) {
-      pos = parseInt(pos);
-      word = wordsArray[pos].toLowerCase();
+      word = wordsArray[pos];
 
       if (!word) { continue; }
       if (word.length < 2) { continue; }
@@ -38,6 +38,8 @@ window.DuplicateWordsApp.DuplicatesFinderModule = function(wordFormsHandler) {
     }
 
     this.compareEach();
+
+    return this.matrix;
   };
 
   wordMatrix.compareEach = function() {
@@ -56,6 +58,7 @@ window.DuplicateWordsApp.DuplicatesFinderModule = function(wordFormsHandler) {
       }
     }
   };
+
   wordMatrix.compareLastLetter = function(word, word2) {
     if (word.length === word2.length 
       && word.slice(0, word.length - 1) === word2.slice(0, word2.length - 1)) {
@@ -125,6 +128,7 @@ window.DuplicateWordsApp.DuplicatesFinderModule = function(wordFormsHandler) {
         }
       }
     }
+
     return repetitions;
   };
 
